@@ -1,0 +1,9 @@
+<div [formGroup]="form" style="display:flex;flex-direction:column">
+  <label>Username:</label>
+  <input type="text" formControlName="username" />
+
+  <label>Password:</label>
+  <input type="password" formControlName="password" />
+
+  <button (click)="submit()" style="margin-top:20px">Submit</button>
+</div>
