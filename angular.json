@@ -23,6 +23,14 @@
             "scripts": []
           },
           "configurations": {
+            "development": {
+              "buildOptimizer": false,
+              "optimization": false,
+              "vendorChunk": true,
+              "extractLicenses": false,
+              "sourceMap": true,
+              "namedChunks": true
+            },
             "production": {
               "fileReplacements": [
                 {
@@ -48,6 +56,9 @@
             "browserTarget": "demo:build"
           },
           "configurations": {
+            "development": {
+              "browserTarget": "demo:build:development"
+            },
             "production": {
               "browserTarget": "demo:build:production"
             }

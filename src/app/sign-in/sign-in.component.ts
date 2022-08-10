@@ -19,9 +19,12 @@ export class SignInComponent implements OnInit {
 
   submit() {
     if (this.form.get("password").value === "password") {
-      const newURI = `http${this.router.snapshot.queryParamMap
-        .get("url")
-        .slice(5)}?token=asdf1234`;
+      let newURI = `${this.router.snapshot.queryParamMap.get(
+        "url"
+      )}?token=asdf1234`;
+      if (newURI.startsWith("https")) {
+        newURI = `http${newURI.slice(5)}`;
+      }
       console.log(newURI);
       window.location.assign(newURI);
     }
